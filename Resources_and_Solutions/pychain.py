@@ -103,6 +103,7 @@ st.markdown("## Store a Transaction Record in the PyChain")
 
 ################################################################################
 
+# Set sender, receiver, and amount; replace data set with 'Record' for new block
 pychain = setup()
 
 sender = st.text_input('Sender')
@@ -123,6 +124,7 @@ if st.button("Add Block"):
 
 ################################################################################
 
+# Prepare dataframe; set difficulty and sidebar
 st.markdown("## The PyChain Ledger")
 
 pychain_df = pd.DataFrame(pychain.chain).astype(str)
